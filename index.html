@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main/auth.css" />
+    <title>Auth</title>
+  </head>
+  <body>
+    <h1>Authorize please</h1>
+    <form action="php/auth.php" method="POST">
+      <input type="text" placeholder="login" name="login" id="login" />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="password"
+      />
+      <button type="submit" id="submit">auth</button>
+    </form>
+    <div class="circles">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </body>
+</html>
