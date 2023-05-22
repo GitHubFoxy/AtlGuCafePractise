@@ -54,5 +54,4 @@ SubmitNewEmployee.addEventListener("click", (e) => {
     Role: `${document.querySelector("#RoleSelect").value}`,
   };
   newEmployeeDialog.close();
-  console.log("New Employee Added\n", newEmployee);
 });
