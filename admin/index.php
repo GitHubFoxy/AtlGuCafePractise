@@ -19,45 +19,45 @@
               name=""
               id="searchEmployee"
               placeholder="Search employee"
+              onkeyup="Search()"
             />
           </p>
           
           <ul id="listofemployee">
-            <li>Lorem<span> +</span></li>
-            <li>Repellat!<span> +</span></li>
-            <li>Voluptatibus!<span> +</span></li>
-            <li>Reprehenderit?<span> +</span></li>
-            <li>In?<span> +</span></li>
+            <li data-role="2"><a href="#">Lorem<span id="addspan">+</span></a></li>
+            <li data-role="2"><a href="#">Repellat!<span id="addspan">+</span></a></li>
+            <li data-role="3"><a href="#">Voluptatibus!<span id="addspan">+</span></a></li>
+            <li data-role="2"><a href="#">Reprehenderit?<span id="addspan">+</span></a></li>
+            <li data-role="3"><a href="#">In?<span id="addspan">+</span></a></li>
+            <li data-role="2"><a href="#">Neque?<span id="addspan" > +</span></a></li>
+            <li data-role="3"><a href="#">Dicta!<span id="addspan" > +</span></a></li>
+            <li data-role="2"><a href="#">Nemo!<span id="addspan" > +</span></a></li>
+            <li data-role="3"><a href="#">Architecto.<span id="addspan" > +</span></a></li>
+            <li data-role="2"><a href="#">Architecto.<span id="addspan" > +</span></a></li>
+            <li data-role="3"><a href="#">Neque?<span id="addspan" > +</span></a></li>
+            <li data-role="2"><a href="#">Dicta!<span id="addspan" > +</span></a></li>
+            <li data-role="3"><a href="#">Nemo!<span id="addspan" > +</span></a></li>
+            <li data-role="2"><a href="#">Architecto.<span id="addspan" > +</span></a></li>
+            <li data-role="3"><a href="#">Architecto.<span id="addspan" > +</span></a></li>
           </ul>
         </input>
           <table id="phoneflex">
             <tr id="phoneflex">
               <th>
                 <p>Chef</p>
-                <ul id="scrollbar">
-                  <li>Lorem.<span id="spandelete"> -</span></li>
-                  <li>Neque?<span id="spandelete"> -</span></li>
-                  <li>Dicta!<span id="spandelete"> -</span></li>
-                  <li>Nemo!<span id="spandelete"> -</span></li>
-                  <li>Architecto.<span id="spandelete"> -</span></li>
-                  <li>Architecto.<span id="spandelete"> -</span></li>
+                <ul id="scrollbar"class="cheful">
+                 
                 </ul>
               </th>
               <th>
                 <p>Waiter</p>
-                <ul id="scrollbar">
-                  <li>Lorem.<span id="spandelete"> -</span></li>
-                  <li>Neque?<span id="spandelete"> -</span></li>
-                  <li>Dicta!<span id="spandelete"> -</span></li>
-                  <li>Nemo!<span id="spandelete"> -</span></li>
-                  <li>Architecto.<span id="spandelete"> -</span></li>
-                  <li>Architecto.<span id="spandelete"> -</span></li>
+                <ul id="scrollbar"class="waiterul">
                 </ul>
               </th>
             </tr>
           </table>
-          <p>Started At: <input type="datetime-local" name="" id="startAT" /></p>
-          <p>End At: <input type="datetime-local" name="" id="endAT" /></p>
+          <p>Started At: <input type="datetime-local" name="" id="start_at" /></p>
+          <p>End At: <input type="datetime-local" name="" id="end_at" /></p>
           <div id="Shiftbtns">
             <button id="DiscardShift">Discard</button>
             <button id="ConfirmShift">Confirm</button>
