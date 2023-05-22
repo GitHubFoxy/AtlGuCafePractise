@@ -118,3 +118,8 @@ input::placeholder {
 input:focus::placeholder {
   opacity: 0.1;
 }
+@media screen and (max-width: 475px) {
+  body {
+    padding: 10px;
+  }
+}

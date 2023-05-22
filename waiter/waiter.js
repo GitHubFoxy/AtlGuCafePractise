@@ -1,5 +1,5 @@
 let search = document.querySelector("#search");
-let submit = document.querySelector("#submit");
+let submitbtn = document.querySelector("#submit");
 let addIcon = document.querySelector("#add-icon");
 let h1 = document.querySelector("h1");
 let ol = document.querySelector("ol");
@@ -31,7 +31,8 @@ function editItem(e) {
   /* <div id='edit' onClick=" editItem(this)"></div> */
 }
 
-submit.addEventListener("click", (e) => {
+submitbtn.addEventListener("click", (e) => {
   e.preventDefault;
   console.log(arrayoffood);
+  ol.innerHTML = "";
 });

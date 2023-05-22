@@ -48,19 +48,20 @@ body {
 .hidden {
   display: none;
 }
-h1 {
-  margin-top: 5em;
+.box h1 {
   text-align: center;
+  margin-top: 7em;
 }
 .box {
   display: grid;
+  min-height: 50vh;
+  margin-bottom: 1em;
 }
 #submit {
   justify-self: center;
   background-color: #163055;
   color: white;
   border: 0;
-  margin-top: 1em;
   padding: 5%;
   max-width: 50%;
   min-width: 150px;
@@ -80,7 +81,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.75em;
   margin-top: 5px;
   min-width: 300px;
   border-bottom: grey 1px solid;
@@ -137,26 +138,31 @@ li p {
 #delete:hover {
   background-color: rgb(189, 25, 25);
 }
-#ordersh1 {
-  border: #193b91 2px solid;
-  border-radius: 5px;
-  border-bottom: none;
-}
-.outline {
-  padding: 10px;
-  border: #193b91 2px solid;
-  border-radius: 5px;
+.orders {
   text-align: center;
+  padding: 15px;
+  border: #193b91 1px solid;
+  border-radius: 5px;
 }
-.outline #seeAllBtn {
-  padding: 10px 35px;
-  background-color: #163055;
+#scrollbar {
+  max-height: 15em;
+  overflow-y: scroll;
+}
+#p {
   color: white;
-  border: 0;
-  border-radius: 10px;
+  padding: 10px;
+  background-color: #142e52;
+  border-radius: 5px;
 }
-.outline p {
-  border-bottom: #193b91 1px solid;
+.orders {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+#category {
+  background-color: #1a3f72;
+  padding: 5px;
+  border-radius: 5px;
 }
 footer {
   position: fixed;

@@ -82,7 +82,7 @@
         <h1>Employee`s</h1>
         <input type="text" placeholder="Search" />
         <ul>
-          <li>Lorem.</li>
+          <li>Lorem. <span id="fire">Fire!</span></li>
         </ul>
         <button id="seeAll Employee">See All</button>
       </div>
@@ -91,7 +91,7 @@
         <input type="text" name="" id="Search" placeholder="Search" />
         <p>In Progress</p>
         <ul>
-          <li>Lorem.</li>
+          <li>Lorem. <span id="closeshift">Close</span></li>
         </ul>
         <p>Closed</p>
         <ul>
@@ -100,8 +100,29 @@
         <button id="seeAll Shift">See All</button>
       </div>
       <button id="newEmployee">New Employee</button>
+      <dialog id="newEmployeeDialog">
+        <form action="" id="newEmployeeDialogForm">
+          <p>
+            Auth new Employee
+          </p>
+        
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Login">
+        <input type="password" placeholder="Password">
+        <input type="file" placeholder="photo_file">
+        <select>
+          <option value="Role_id" hidden disabled selected>Role_id</option>
+          <option value="1">Admin</option>
+          <option value="2">Waiter</option>
+          <option value="3">Cook</option>
+        </select>
+        <button type="submit" style="color:white; padding: 0.5em">Submit new Employee</button>
+        </form>
+</dialog>
     </div>
-    <footer>You are logged as, <a href="#">Name</a>.</footer>
+    <?php 
+      include "../php/footer.php";
+    ?>
     <script src="admin.js"></script>
   </body>
 </html>

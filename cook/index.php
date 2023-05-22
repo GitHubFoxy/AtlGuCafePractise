@@ -13,14 +13,14 @@
         <h1>Orders</h1>
         <p>New</p>
         <ul>
-          <li>lorem</li>
-          <li>lorem</li>
+          <li>lorem <span>+</span></li>
+          <li>lorem<span>+</span></li>
         </ul>
         <p>Done</p>
         <ul>
-          <li>lorem</li>
-          <li>lorem</li>
-          <li>lorem</li>
+          <li>lorem<span>+</span></li>
+          <li>lorem<span>+</span></li>
+          <li>lorem<span>+</span></li>
         </ul>
         <button id="seeAllBtn">See All</button>
       </div>
@@ -37,6 +37,8 @@
         </ul>
       </div>
     </div>
-    <footer>You are logged as, <a href="#">Name</a>.</footer>
+    <?php 
+      include "../php/footer.php";
+    ?>
   </body>
 </html>

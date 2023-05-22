@@ -9,7 +9,7 @@ html {
   box-sizing: border-box;
 }
 body {
-  background: #0c1b30;
+  background-color: #0c1b30;
 }
 footer {
   position: fixed;
@@ -22,8 +22,8 @@ footer {
   text-align: center;
   background: linear-gradient(
     0deg,
-    rgba(108, 104, 168, 0.055) 0%,
-    rgba(12, 27, 48, 1) 100%
+    rgb(108, 104, 168) 0%,
+    rgba(12, 27, 48, 0.1) 90%
   );
 }
 footer a {

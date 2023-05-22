@@ -1,4 +1,4 @@
 <?php
-header('Location: waiter/waiter.html');
+header('Location: ../waiter');
 die();
 ?>
