@@ -30,15 +30,15 @@
             <li data-role="2"><a href="#">Reprehenderit?<span id="addspan">+</span></a></li>
             <li data-role="3"><a href="#">In?<span id="addspan">+</span></a></li>
             <li data-role="2"><a href="#">Neque?<span id="addspan" > +</span></a></li>
-            <li data-role="3"><a href="#">Dicta!<span id="addspan" > +</span></a></li>
+            <li data-role="3"><a href="#">Dicta!3<span id="addspan" > +</span></a></li>
             <li data-role="2"><a href="#">Nemo!<span id="addspan" > +</span></a></li>
-            <li data-role="3"><a href="#">Architecto.<span id="addspan" > +</span></a></li>
-            <li data-role="2"><a href="#">Architecto.<span id="addspan" > +</span></a></li>
+            <li data-role="3"><a href="#">Architecto.33<span id="addspan" > +</span></a></li>
+            <li data-role="2"><a href="#">Architecto.22<span id="addspan" > +</span></a></li>
             <li data-role="3"><a href="#">Neque?<span id="addspan" > +</span></a></li>
-            <li data-role="2"><a href="#">Dicta!<span id="addspan" > +</span></a></li>
+            <li data-role="2"><a href="#">Dicta!2<span id="addspan" > +</span></a></li>
             <li data-role="3"><a href="#">Nemo!<span id="addspan" > +</span></a></li>
-            <li data-role="2"><a href="#">Architecto.<span id="addspan" > +</span></a></li>
-            <li data-role="3"><a href="#">Architecto.<span id="addspan" > +</span></a></li>
+            <li data-role="2"><a href="#">Architecto.2<span id="addspan" > +</span></a></li>
+            <li data-role="3"><a href="#">Architecto.3<span id="addspan" > +</span></a></li>
           </ul>
         </input>
           <table id="phoneflex">

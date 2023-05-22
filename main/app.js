@@ -1,6 +1,5 @@
 const submit = document.querySelector("#submit")
-submit.addEventListener("click", (e) => {
-e.preventDefault()
+submit.addEventListener("click", () => {
 const authObject = {
     "login": `${document.querySelector("#login").value}`,
     "password": `${document.querySelector("#password").value}`
