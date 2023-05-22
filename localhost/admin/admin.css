@@ -1,0 +1,256 @@
+html {
+  height: 100%;
+}
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #0c1b30;
+  color: white;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  font-size: 1em;
+  left: 0;
+  padding: 25px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background: linear-gradient(
+    0deg,
+    rgb(108, 104, 168) 0%,
+    rgba(12, 27, 48, 0.1) 90%
+  );
+}
+a {
+  text-decoration: none;
+  color:black;
+}
+#listofemployee a {
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+}
+footer a {
+  color: white;
+}
+.box {
+  padding: 1em;
+  padding-bottom: 5em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2em;
+  place-items: center;
+  text-align: center;
+}
+#newEmployee {
+  grid-column-start: 3;
+}
+button {
+  width: 10em;
+  height: 3em;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+  background-color: #255291;
+}
+#fire,
+#closeshift {
+  background-color: red;
+}
+ul {
+  list-style-type: none;
+}
+.outline {
+  border: #255291 2px solid;
+  padding: 2em;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 250px;
+}
+.outline button {
+  place-self: center;
+}
+.outline h1 {
+  border-bottom: #255291 2px solid;
+}
+ul li {
+  display: flex;
+  justify-content: space-between;
+}
+table th {
+  padding: 5px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#spandelete {
+  background-color: red;
+  padding: 1px 8px;
+}
+table tr th:first-child {
+  border-right: black 2px solid;
+}
+ul li span {
+  padding: 1px 6px;
+  background-color: green;
+  border-radius: 100%;
+  cursor: pointer;
+}
+#shiftDialogForm {
+  position: fixed;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 10px;
+}
+tr th ul {
+  font-weight: 300;
+}
+dialog::backdrop {
+  background-color: black;
+  opacity: 0.8;
+}
+dialog form p {
+  display: flex;
+  flex-direction: column;
+}
+#scrollbar {
+  border: 1px black solid;
+  height: 10em;
+  width: 15em;
+  overflow: auto;
+  padding: 10px;
+}
+dialog form #listofemployee {
+  border: 1px black solid;
+  height: 10em;
+
+  overflow: auto;
+  padding: 10px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+dialog form #listofemployee li {
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+#searchEmployee {
+  padding: 5px;
+  border-radius: 5px;
+}
+#shiftDialogForm button:first-child {
+  background-color: red;
+}
+#shiftDialogForm button {
+  background-color: green;
+  color: white;
+}
+#newEmployeeDialog button {
+  color: red;
+  padding: 0.5em;
+  background-color: pink;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#newEmployeeDialog button:last-child {
+  color: green;
+  background-color: lightgreen;
+}
+
+#newEmployeeDialog {
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 10px;
+}
+
+#newEmployeeDialogForm {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+}
+#newEmployeeDialogForm input,
+select {
+  border: 0;
+  padding: 0.5em;
+  border-bottom: 1px black solid;
+}
+@media screen and (max-width: 475px) {
+  .box {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+  }
+  .outline {
+    min-width: 250px;
+  }
+  #newEmployee {
+    grid-column-start: 1;
+  }
+  .shifts {
+    grid-row-start: 2;
+  }
+  #shiftDialogForm {
+    max-height: 100%;
+    min-width: 100vw;
+    overflow-y: scroll;
+    border-radius: 0;
+  }
+  #Shiftbtns {
+    display: flex;
+    gap: 5px;
+  }
+  #phoneflex {
+    display: flex;
+    flex-direction: column;
+  }
+  #listofemployee {
+    min-height: 10em;
+
+    padding: 10px;
+  }
+  table tr th:first-child {
+    border-right: none;
+  }
+}
