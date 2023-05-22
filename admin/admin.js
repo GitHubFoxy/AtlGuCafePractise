@@ -34,6 +34,25 @@ closeShift.addEventListener("click", (e) => {
 
 const OpenNewEmployee = document.querySelector("#newEmployee");
 const newEmployeeDialog = document.querySelector("#newEmployeeDialog");
+const DiscardNewEmployee = document.querySelector("#discardNewEmployee");
+const SubmitNewEmployee = document.querySelector("#submitNewEmployee");
 OpenNewEmployee.addEventListener("click", (e) => {
+  e.preventDefault();
   newEmployeeDialog.showModal();
+});
+DiscardNewEmployee.addEventListener("click", (e) => {
+  e.preventDefault();
+  newEmployeeDialog.close();
+});
+SubmitNewEmployee.addEventListener("click", (e) => {
+  e.preventDefault();
+  newEmployee = {
+    name: `${document.querySelector("#NewEmployeeNameInput").value}`,
+    login: `${document.querySelector("#NewEmployeeLoginInput").value}`,
+    password: `${document.querySelector("#NewEmployeePasswordInput").value}`,
+    AvatarURL: `${document.querySelector("#NewEmployeeURLInput").value}`,
+    Role: `${document.querySelector("#RoleSelect").value}`,
+  };
+  newEmployeeDialog.close();
+  console.log("New Employee Added\n", newEmployee);
 });

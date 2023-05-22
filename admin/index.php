@@ -56,8 +56,8 @@
               </th>
             </tr>
           </table>
-          <p>Started At: <input type="datetime-local" name="" id="" /></p>
-          <p>End At: <input type="datetime-local" name="" id="" /></p>
+          <p>Started At: <input type="datetime-local" name="" id="startAT" /></p>
+          <p>End At: <input type="datetime-local" name="" id="endAT" /></p>
           <div id="Shiftbtns">
             <button id="DiscardShift">Discard</button>
             <button id="ConfirmShift">Confirm</button>
@@ -100,23 +100,24 @@
         <button id="seeAll Shift">See All</button>
       </div>
       <button id="newEmployee">New Employee</button>
-      <dialog id="newEmployeeDialog">
+      <dialog id="newEmployeeDialog" class="hidden">
         <form action="" id="newEmployeeDialogForm">
           <p>
             Auth new Employee
           </p>
         
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Login">
-        <input type="password" placeholder="Password">
-        <input type="file" placeholder="photo_file">
-        <select>
+        <input type="text" placeholder="Name" id="NewEmployeeNameInput">
+        <input type="text" placeholder="Login"id="NewEmployeeLoginInput">
+        <input type="password" placeholder="Password"id="NewEmployeePasswordInput">
+        <input type="file" accept="image/png, image/gif, image/jpeg" placeholder="photo_file"id="NewEmployeeURLInput">
+        <select id="RoleSelect">
           <option value="Role_id" hidden disabled selected>Role_id</option>
           <option value="1">Admin</option>
           <option value="2">Waiter</option>
           <option value="3">Cook</option>
         </select>
-        <button type="submit" style="color:white; padding: 0.5em">Submit new Employee</button>
+        <div class="flex"><button id="discardNewEmployee">Discard</button><button id="submitNewEmployee"type="submit">Submit new Employee</button>
+        </div>
         </form>
 </dialog>
     </div>
