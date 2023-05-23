@@ -7,17 +7,10 @@ const OpenNewEmployee = document.querySelector("#newEmployee");
 const newEmployeeDialog = document.querySelector("#newEmployeeDialog");
 const DiscardNewEmployee = document.querySelector("#discardNewEmployee");
 const SubmitNewEmployee = document.querySelector("#submitNewEmployee");
-<<<<<<< HEAD
 const spanAdd = document.querySelectorAll("#addspan");
 const cheful = document.querySelector(".cheful");
 const waiterul = document.querySelector(".waiterul");
 const SearchUL = document.querySelector("#listofemployee");
-=======
-const spanAdd = document.querySelectorAll("#addspan")
-const cheful = document.querySelector(".cheful")
-const waiterul = document.querySelector(".waiterul");
-const SearchUL = document.querySelector("#listofemployee")
->>>>>>> 371572bbdefdcf0ae1013835b757ad5ab153e641
 
 showButton.addEventListener("click", (e) => {
   shiftDialog.showModal();
@@ -49,35 +42,6 @@ DiscardNewEmployee.addEventListener("click", (e) => {
 
 //////////////////////////////////////////////////////////////////
 ConfirmShift.addEventListener("click", (e) => {
-<<<<<<< HEAD
-=======
-  e.preventDefault();
-  shiftDialog.close();
-  let chefCrew = []
-  let chefulli = document.querySelectorAll(".cheful li")
-  chefulli.forEach(li => {
-  chefCrew.push(li.innerText.slice(0,-1))
-  })
-  let WaiterCrew = []
-  let Waiter_ul_li = document.querySelectorAll(".waiterul li")
-  Waiter_ul_li.forEach(li => {
-    WaiterCrew.push(li.innerText.slice(0,-1))
-    })
-
-  ShiftObject = {
-    "start_at": document.querySelector("#start_at").value,
-    "end_at": document.querySelector("#end_at").value,
-    "chef": chefCrew,
-    "waiter": WaiterCrew,
-  }
-  console.log(JSON.stringify(ShiftObject))
-});
-//////////////////////////////////////////////////////////////////
-
-
-//////////////////////////////////////////////////////////////
-SubmitNewEmployee.addEventListener("click", (e) => {
->>>>>>> 371572bbdefdcf0ae1013835b757ad5ab153e641
   e.preventDefault();
   shiftDialog.close();
   let chefCrew = [];
@@ -110,7 +74,6 @@ SubmitNewEmployee.addEventListener("click", () => {
     AvatarURL: `${document.querySelector("#NewEmployeeURLInput").value}`,
     Role: `${document.querySelector("#RoleSelect").value}`,
   };
-<<<<<<< HEAD
   console.log(JSON.stringify(newEmployee));
 });
 //////////////////////////////////////////////////////////////////
@@ -168,18 +131,14 @@ spanAdd.forEach((span) => {
       SearchUL.removeChild(e.target.closest("li"));
     }
   });
-=======
-  console.log(JSON.stringify(newEmployee))
-  newEmployeeDialog.close();
->>>>>>> 371572bbdefdcf0ae1013835b757ad5ab153e641
 });
 //////////////////////////////////////////////////////////////////
 
 function Search() {
-  const SearchBar = document.querySelector("#searchEmployee")
-  let filter = SearchBar.value.toUpperCase()
-  const SearchUL = document.querySelector("#listofemployee")
-  const li = document.querySelectorAll("#listofemployee li")
+  const SearchBar = document.querySelector("#searchEmployee");
+  let filter = SearchBar.value.toUpperCase();
+  const SearchUL = document.querySelector("#listofemployee");
+  const li = document.querySelectorAll("#listofemployee li");
   for (i = 0; i < li.length; i++) {
     a = li[i].getElementsByTagName("a")[0];
     txtValue = a.textContent || a.innerText;
@@ -191,29 +150,41 @@ function Search() {
   }
 }
 
-
 function spanDelete() {
-  const spanDelete = document.querySelectorAll("#spandelete")
-  spanDelete.forEach(span => {
-  span.addEventListener("click", (e) => {
-    // e.target.closest("li").style.display= "none";
-    cheful.removeChild(e.target.closest("li"))
-    SearchUL.innerHTML += `<li data-role=${e.target.closest("li").dataset.role}>${e.target.closest("li").textContent.slice(0,-1)}<span id="addspan">+</span></li>`
-  })
-}); 
+  const spanDelete = document.querySelectorAll("#spandelete");
+  spanDelete.forEach((span) => {
+    span.addEventListener("click", (e) => {
+      // e.target.closest("li").style.display= "none";
+      cheful.removeChild(e.target.closest("li"));
+      SearchUL.innerHTML += `<li data-role=${
+        e.target.closest("li").dataset.role
+      }>${e.target
+        .closest("li")
+        .textContent.slice(0, -1)}<span id="addspan">+</span></li>`;
+    });
+  });
 }
 
-spanAdd.forEach(span => {
+spanAdd.forEach((span) => {
   span.addEventListener("click", (e) => {
-    if(e.target.closest("li").dataset.role == "2"){
-      cheful.innerHTML += `<li data-role=${e.target.closest("li").dataset.role}>${e.target.closest("li").textContent.slice(0,-1)}<span id="spandelete" onclick="spanDelete()">-</span></li>`
-      SearchUL.removeChild(e.target.closest("li"))
+    if (e.target.closest("li").dataset.role == "2") {
+      cheful.innerHTML += `<li data-role=${
+        e.target.closest("li").dataset.role
+      }>${e.target
+        .closest("li")
+        .textContent.slice(
+          0,
+          -1
+        )}<span id="spandelete" onclick="spanDelete()">-</span></li>`;
+      SearchUL.removeChild(e.target.closest("li"));
     } else {
-      waiterul.innerHTML += `<li>${e.target.closest("li").textContent.slice(0,-1)}<span id="spandelete" onclick="spanDelete()">-</span></li>`
-      SearchUL.removeChild(e.target.closest("li"))
-
+      waiterul.innerHTML += `<li>${e.target
+        .closest("li")
+        .textContent.slice(
+          0,
+          -1
+        )}<span id="spandelete" onclick="spanDelete()">-</span></li>`;
+      SearchUL.removeChild(e.target.closest("li"));
     }
-  })
-})
-
-
+  });
+});
